@@ -49,7 +49,7 @@ const QuizContext = createContext<QuizContextProps>({
 });
 
 const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState<Country[]>([]);
   const [playerScore, setPlayerScore] =
     useState<PlayerScore>(EMPTY_PLAYERSCORE);
@@ -152,6 +152,9 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
 
   // TODO Responder pregunta
   const answer = (playerAnswer: string) => {
+    console.log(
+      playerAnswer === currentQuestion.correct_Response ? "CORRECT" : "wrong..."
+    );
     setPlayerScore((prev) => ({
       ...prev,
       currentNumberQuestion: prev.currentNumberQuestion + 1,
