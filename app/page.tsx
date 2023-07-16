@@ -1,10 +1,12 @@
-import Image from 'next/image'
-import TestContext from './components/TestContext'
+import Image from "next/image";
+import MainDiv from "./components/MainDiv";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <TestContext />
-    </main>
-  )
+    <MainDiv>
+      <div className="bg-red-900">
+        <h1>Yooo</h1>
+      </div>
+    </MainDiv>
+  );
 }
