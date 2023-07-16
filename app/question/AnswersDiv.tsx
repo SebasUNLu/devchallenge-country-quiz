@@ -1,21 +1,43 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuizContext } from "../utils/context/QuizContext";
 import AnswerCard from "./AnswerCard";
+import { useRouter } from "next/navigation";
+import Loading from "../components/loading/Loading";
 
 const INDEXES = ["A.", "B.", "C.", "D."];
 
 const AnswersDiv = () => {
-  const { currentQuestion } = useQuizContext();
+  const { currentQuestion, playerScore, getQuestion, loading } =
+    useQuizContext();
+  const { currentNumberQuestion, maxQuestions } = playerScore;
   const [answered, setAnswered] = useState(false);
   // este es el que se ha clickeado
   const [answerIndex, setAnswerIndex] = useState(-1);
+  const { push } = useRouter();
 
   const answerCard = (index: number) => {
     setAnswerIndex(index);
     setAnswered(true);
   };
+
+  const resetAnswers = () => {
+    setAnswerIndex(-1);
+    setAnswered(false);
+  };
+
+  const handleNextQuestion = () => {
+    console.log("Generating next question...");
+    if (currentNumberQuestion > maxQuestions) {
+      push("final");
+    } else {
+      resetAnswers();
+      getQuestion();
+    }
+  };
+
+  if (loading) return <Loading />;
 
   return (
     <div>
@@ -41,7 +63,7 @@ const AnswersDiv = () => {
         );
       })}
       {answered && (
-        <button className="" onClick={() => {}}>
+        <button className="" onClick={handleNextQuestion}>
           Next
         </button>
       )}

@@ -6,11 +6,11 @@ import { ProgressBar } from "react-loader-spinner";
 import { redirect, useRouter } from "next/navigation";
 
 const HomeDiv = () => {
-  const { loading, getQuestion } = useQuizContext();
+  const { loading, start } = useQuizContext();
   const { push } = useRouter();
 
   const handleClick = () => {
-    getQuestion()
+    start()
     console.log('s')
     push('/question')
   };

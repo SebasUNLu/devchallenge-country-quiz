@@ -28,15 +28,16 @@ const AnswerCard = ({
 
   const correctStyle = `bg-[#60BF88] text-white`;
   const wrongStyle = `bg-[#EA8282] text-white`;
-  const clickableStyle = `hover:bg-[#F9A826] hover:text-white cursor-pointer`;
+  const normalStyle = `bg-white text-[#6066D0CC]`;
+  const clickableStyle = `bg-white text-[#6066D0CC] hover:bg-[#F9A826] hover:text-white cursor-pointer`;
 
   return (
     <div
-      className={`w-full bg-white text-[#6066D0CC] flex py-4 px-5 ${
+      className={`w-full flex py-4 px-5 transition-all duration-400 ${
         clickable && clickableStyle
       } ${state === "correct" && correctStyle} ${
         state === "wrong" && wrongStyle
-      }`}
+      } ${state === "normal" && normalStyle}`}
       onClick={handleClick}
     >
       <p className="">{index}</p>

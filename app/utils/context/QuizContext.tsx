@@ -37,6 +37,7 @@ interface QuizContextProps {
   loading: boolean;
   getQuestion: () => void;
   answer: (playerAnswer: string) => void;
+  start: () => void;
 }
 
 const QuizContext = createContext<QuizContextProps>({
@@ -46,6 +47,7 @@ const QuizContext = createContext<QuizContextProps>({
   loading: false,
   getQuestion: () => {},
   answer: () => {},
+  start: () => {},
 });
 
 const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
@@ -86,6 +88,11 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
   const resetScore = () => {
     setPlayerScore(EMPTY_PLAYERSCORE);
     setCurrentQuestion(EMPRY_CURRENTQUESTION);
+  };
+
+  const start = () => {
+    resetScore();
+    getQuestion();
   };
 
   // Function to generate random number
@@ -174,6 +181,7 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
         playerScore,
         getQuestion,
         answer,
+        start,
       }}
     >
       {children}

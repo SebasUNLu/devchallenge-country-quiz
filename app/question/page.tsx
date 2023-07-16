@@ -22,6 +22,10 @@ const page = () => {
     }
   }, []);
 
+  const generateNextQuestion = () => {
+    
+  }
+
   return (
     <MainDiv adventureSvg>
       {currentQuestion.question === QuestionEnum.FLAG_QUESTION && (
