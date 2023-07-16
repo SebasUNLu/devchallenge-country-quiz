@@ -1,12 +1,11 @@
 import Image from "next/image";
 import MainDiv from "./components/MainDiv";
+import HomeDiv from "./components/home/HomeDiv";
 
 export default function Home() {
   return (
-    <MainDiv>
-      <div className="bg-red-900">
-        <h1>Yooo</h1>
-      </div>
+    <MainDiv adventureSvg>
+      <HomeDiv />
     </MainDiv>
   );
 }

@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { Api_Response, Country, QuestionEnum } from "../types/types";
+import { redirect } from "next/navigation";
 
 interface CurrentQuestion {
   question: QuestionEnum;
@@ -114,7 +115,6 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
    * Inicia el proceso de armar una pregunta. Estas solo pueden ser de Capital o de Bandera.
    */
   const getQuestion = () => {
-    resetScore();
     setLoading(true);
     const generatedQuestion = randomNumber(0, 1);
 
