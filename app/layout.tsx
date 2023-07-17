@@ -16,9 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${inter.className} bg-[url("/background.png")] bg-no-repeat bg-cover bg-center flex items-center justify-stretch`}
+        suppressHydrationWarning={true}
       >
         <QuizContextPovider>
           <main className="flex min-h-screen flex-col items-center justify-center py-10 px-4 w-full">

@@ -153,7 +153,6 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
       question: newQuestion,
     };
     setCurrentQuestion(newCurrentQuestion);
-    console.log(newCurrentQuestion);
     setLoading(false);
   };
 
