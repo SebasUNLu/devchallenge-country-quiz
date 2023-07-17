@@ -5,12 +5,10 @@ import Image from "next/image";
 
 type MainDivProps = React.PropsWithChildren & {
   adventureSvg?: boolean;
-  victorySvg?: boolean;
 };
 
 const MainDiv = ({
   adventureSvg = false,
-  victorySvg = false,
   children,
 }: MainDivProps) => {
   return (
