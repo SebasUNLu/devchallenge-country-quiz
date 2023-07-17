@@ -5,6 +5,7 @@ import React from "react";
 import { ProgressBar } from "react-loader-spinner";
 import { redirect, useRouter } from "next/navigation";
 import AnswerCard from "@/app/components/question/AnswerCard";
+import Loading from "../loading/Loading";
 
 const HomeDiv = () => {
   const { loading, start } = useQuizContext();
