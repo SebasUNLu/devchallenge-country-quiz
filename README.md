@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">DevChallenge - Country Quiz!</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://devchallenge-country-quiz.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/xUqvUXS9pnnzhZ9Opo21">
       Solution
     </a>
     <span> | </span>
@@ -37,21 +37,26 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![image](https://github.com/SebasUNLu/devchallenge-country-quiz/assets/72535215/1b173a09-37f9-4cd7-8c31-bfeb1564b231)
+![image](https://github.com/SebasUNLu/devchallenge-country-quiz/assets/72535215/bc3aba20-0de4-44e2-b883-296456b691d0)
+![image](https://github.com/SebasUNLu/devchallenge-country-quiz/assets/72535215/64987233-917a-47b2-ae34-98db9f8896a7)
+![image](https://github.com/SebasUNLu/devchallenge-country-quiz/assets/72535215/40ae2944-3928-43a7-be0c-bb62ed388c34)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+A simple quiz about country capitals and flags.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+Only two types of questions:
+- X is the capital of which country
+- What country does this flag belong to? Each question has 4 answers, only one of them being the correct one.
+
+You can see the demo [Here](https://devchallenge-country-quiz.vercel.app/)
+
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
+- [Next.js](https://nextjs.org/)
 - [Tailwind](https://tailwindcss.com/)
 
 ## Features
@@ -74,7 +79,7 @@ $ git clone https://github.com/your-user-name/your-project-name
 $ npm install
 
 # Run the app
-$ npm start
+$ npm run dev
 ```
 
 ## Acknowledgements
@@ -83,10 +88,8 @@ $ npm start
 
 - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
 - [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [SebasUNLu](https://github.com/SebasUNLu)
+- Linkedin [Sebastián Pedro Marchetti](https://www.linkedin.com/in/sebasti%C3%A1n-pedro-marchetti/)
