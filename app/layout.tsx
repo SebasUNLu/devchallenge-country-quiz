@@ -22,8 +22,26 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <QuizContextPovider>
-          <main className="flex min-h-screen flex-col items-center justify-center py-10 px-4 w-full">
+          <main className="flex min-h-screen flex-col items-center justify-evenly py-10 px-4 w-full">
             {children}
+            <div className="text-white">
+              Made by{" "}
+              <a
+                href="https://github.com/SebasUNLu"
+                target="_blank"
+                className="underline font-bold"
+              >
+                Sebastián Marchetti
+              </a>{" "}
+              -{" "}
+              <a
+                href="https://devchallenges.io/paths/front-end-developer"
+                target="_blank"
+                className=""
+              >
+                devchallenge.io
+              </a>
+            </div>
           </main>
         </QuizContextPovider>
       </body>
