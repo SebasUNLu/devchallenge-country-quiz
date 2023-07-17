@@ -137,13 +137,13 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
     let newMainSubject;
     let newQuestion;
     switch (generatedQuestion) {
-      case 0:
-        newMainSubject = correctCountry.capital;
-        newQuestion = QuestionEnum.CAPITAL_QUESTION;
-        break;
-      default:
+      case 1:
         newMainSubject = correctCountry.flag;
         newQuestion = QuestionEnum.FLAG_QUESTION;
+        break;
+      default:
+        newMainSubject = correctCountry.capital;
+        newQuestion = QuestionEnum.CAPITAL_QUESTION;
         break;
     }
     const newCurrentQuestion: CurrentQuestion = {
@@ -153,6 +153,7 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
       question: newQuestion,
     };
     setCurrentQuestion(newCurrentQuestion);
+    console.log(newCurrentQuestion);
     setLoading(false);
   };
 

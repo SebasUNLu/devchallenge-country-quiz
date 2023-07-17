@@ -20,7 +20,7 @@ const page = () => {
         setQuestion(`Which country does this flag belong to:`);
         break;
     }
-  }, []);
+  }, [currentQuestion]);
 
   const generateNextQuestion = () => {
     
