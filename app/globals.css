@@ -7,3 +7,23 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+.customBtn{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  box-shadow: 0px 2px 4px 0px #FCA82F66;
+  background: #F9A826;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 1em;
+  color: white;
+}
+
+.customBtn:hover{
+  background: #c58722;
+}

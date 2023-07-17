@@ -1,10 +1,9 @@
 import React from 'react';
+import { ProgressBar } from 'react-loader-spinner';
 
 const Loading = () => {
   return (
-    <div>
-      
-    </div>
+    <ProgressBar />
   );
 };
 

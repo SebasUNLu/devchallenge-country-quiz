@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { useQuizContext } from "../utils/context/QuizContext";
 import AnswerCard from "./AnswerCard";
 import { useRouter } from "next/navigation";
-import Loading from "../components/loading/Loading";
+import { useQuizContext } from "@/app/utils/context/QuizContext";
+import Loading from "../loading/Loading";
 
 const INDEXES = ["A.", "B.", "C.", "D."];
 
@@ -28,7 +28,6 @@ const AnswersDiv = () => {
   };
 
   const handleNextQuestion = () => {
-    console.log("Generating next question...");
     if (currentNumberQuestion > maxQuestions) {
       push("final");
     } else {
@@ -40,7 +39,7 @@ const AnswersDiv = () => {
   if (loading) return <Loading />;
 
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       {currentQuestion.answers.map((ans, index) => {
         return (
           <AnswerCard
@@ -59,11 +58,12 @@ const AnswersDiv = () => {
             }
             text={ans}
             clickCallback={() => answerCard(index)}
+            key={`opcion_${index}`}
           />
         );
       })}
       {answered && (
-        <button className="" onClick={handleNextQuestion}>
+        <button className="customBtn self-end" onClick={handleNextQuestion}>
           Next
         </button>
       )}

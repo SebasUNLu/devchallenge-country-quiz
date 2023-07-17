@@ -14,13 +14,13 @@ const page = () => {
 
   return (
     <MainDiv>
-      <div className="">
+      <div className="flex flex-col items-center gap-4">
         <Image src={finalVictorySvg} alt="" width={238} height={136} />
-        <p>Results</p>
-        <div>
-          You got <p>{score}</p> correct answers
+        <p className="text-[#1D355D] font-bold text-3xl">Results</p>
+        <div className="flex gap-1 items-end">
+          You got <p className="font-bold text-[#6FCF97] text-xl">{score}</p> correct answers
         </div>
-        <button onClick={() => push('/')}>Try Again</button>
+        <button onClick={() => push('/')} className="customBtn">Try Again</button>
       </div>
     </MainDiv>
   );

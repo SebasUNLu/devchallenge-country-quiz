@@ -2,7 +2,6 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { Api_Response, Country, QuestionEnum } from "../types/types";
-import { redirect } from "next/navigation";
 
 interface CurrentQuestion {
   question: QuestionEnum;
@@ -159,9 +158,6 @@ const QuizContextPovider = ({ children }: React.PropsWithChildren) => {
 
   // TODO Responder pregunta
   const answer = (playerAnswer: string) => {
-    console.log(
-      playerAnswer === currentQuestion.correct_Response ? "CORRECT" : "wrong..."
-    );
     setPlayerScore((prev) => ({
       ...prev,
       currentNumberQuestion: prev.currentNumberQuestion + 1,
